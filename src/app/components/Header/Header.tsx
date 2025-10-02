@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import useWindowWidth from "@/app/hooks/useWindowWidth";
 import Image from "next/image";
 import Nav from "./Nav/Nav";
@@ -8,8 +8,6 @@ import { RxCross2 } from "react-icons/rx";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 function Header() {
-  const headerRef = useRef<HTMLElement>(null);
-
   const windowWidth = useWindowWidth();
 
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
@@ -26,10 +24,7 @@ function Header() {
   }, [windowWidth, mobileMenuIsOpen]);
 
   return (
-    <header
-      ref={headerRef}
-      className="w-full h-[7rem] border-b border-b-[#b0f45a]"
-    >
+    <header className="w-full h-[7rem] border-b border-b-[#b0f45a]">
       <div className="md:px-16 flex justify-between items-center w-full max-w-7xl h-full mx-auto px-6">
         <div className="w-32">
           <Image
