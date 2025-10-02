@@ -1,0 +1,8 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+	<style>
+		.s0 { fill: #ffffff } 
+		.s1 { fill: #b0f45a } 
+	</style>
+	<path id="H" class="s0" aria-label="H"  d="m135.7 292h22.5l30.4-171.4h-22.5l-13.4 75.8h-87.7l13.6-75.8h-22.5l-30.7 171.4h22.5l14.1-78.2h87.5z"/>
+	<path id="D" class="s1" aria-label="D"  d="m277.7 107.9h-69.4v184.1h69.4c59 0 97-37.5 97-92 0-54.9-38-92.1-97-92.1zm-24.3 145.3v-107h21.4c34 0 54 19.9 54 53.8 0 33.8-20 53.2-54 53.2z"/>
+</svg>
