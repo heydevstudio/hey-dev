@@ -46,7 +46,7 @@ function ServiceItem({ serviceItem }: IProps) {
               onClick={() => setVideoIsOpen(false)}
             >
               <div
-                className="sm:w-[75%] relative w-[calc(100%-2rem)] max-w-[50rem] aspect-video"
+                className="sm:w-[75%] relative w-[calc(100%-1.5rem)] max-w-[50rem] aspect-video"
                 onClick={(e) => e.stopPropagation()}
               >
                 <button

@@ -13,7 +13,7 @@ function Section({ id, title, aos, children }: IProps) {
       id={id}
       className={`w-full max-w-7xl mx-auto py-16 ${
         !title
-          ? "lg:h-[calc(100vh-6rem)] lg:max-h-[40rem] lg:py-0 flex items-center"
+          ? "lg:h-[calc(100vh-7rem)] lg:max-h-[40rem] lg:py-0 flex items-center"
           : ""
       }`}
     >

@@ -30,7 +30,7 @@ function Header() {
       ref={headerRef}
       className="w-full h-[7rem] border-b border-b-[#b0f45a]"
     >
-      <div className="md:px-16 flex justify-between items-center w-full max-w-7xl h-full mx-auto px-8">
+      <div className="md:px-16 flex justify-between items-center w-full max-w-7xl h-full mx-auto px-6">
         <div className="w-32">
           <Image
             src="/img/logo.svg"
