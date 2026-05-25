@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function AOSInit() {
+function AOSInit() {
   useEffect(() => {
     AOS.init({
       offset: 60,
@@ -15,3 +15,5 @@ export default function AOSInit() {
 
   return null;
 }
+
+export default AOSInit;

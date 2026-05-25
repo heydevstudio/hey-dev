@@ -2,7 +2,7 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer";
 
-function Page() {
+function page() {
   return (
     <>
       <Header />
@@ -12,4 +12,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default page;

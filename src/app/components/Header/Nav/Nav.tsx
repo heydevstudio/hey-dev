@@ -8,41 +8,41 @@ interface IProps {
   setMobileMenuIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
+const navItems: INavItem[] = [
+  {
+    href: "#why-choose-us",
+    label: "Por Qué Elegirnos",
+  },
+  {
+    href: "#services",
+    label: "Servicios",
+  },
+  {
+    href: "#work-process",
+    label: "Proceso de Trabajo",
+  },
+  {
+    href: "#faq",
+    label: "FAQ",
+  },
+  {
+    href: "#contact",
+    label: "Contacto",
+  },
+];
+
 function Nav({ mobileMenuIsOpen, setMobileMenuIsOpen }: IProps) {
   const windowWidth = useWindowWidth();
 
-  const navItems: INavItem[] = [
-    {
-      href: "#why-choose-us",
-      label: "Por Qué Elegirnos",
-    },
-    {
-      href: "#services",
-      label: "Servicios",
-    },
-    {
-      href: "#work-process",
-      label: "Proceso de Trabajo",
-    },
-    {
-      href: "#faq",
-      label: "FAQ",
-    },
-    {
-      href: "#contact",
-      label: "Contacto",
-    },
-  ];
-
   return (
     <nav
-      className={`lg:z-0 lg:static lg:size-auto lg:bg-transparent z-10 fixed inset-0 size-screen justify-center items-center bg-[#323232] ${
+      className={`fixed inset-0 z-10 items-center justify-center bg-[#323232] lg:static lg:z-0 lg:bg-transparent ${
         (windowWidth && windowWidth >= 1024) || mobileMenuIsOpen
           ? "flex"
           : "hidden"
       }`}
     >
-      <ul className="lg:flex-row lg:text-base flex flex-col items-center gap-8 text-lg">
+      <ul className="flex flex-col items-center gap-8 text-lg lg:flex-row lg:text-base">
         {navItems.map((navItem, index) => (
           <NavItem
             key={index}

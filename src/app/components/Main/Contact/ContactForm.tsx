@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 function ContactForm() {
   const [isSending, setIsSending] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     setIsSending(true);
@@ -42,10 +42,10 @@ function ContactForm() {
       name="contact"
       method="POST"
       data-netlify="true"
-      className="flex flex-col gap-8 w-full max-w-3xl"
+      className="flex w-full max-w-3xl flex-col gap-8"
       onSubmit={handleSubmit}
     >
-      <div className="md:flex-row flex flex-col gap-8 w-full">
+      <div className="flex w-full flex-col gap-8 md:flex-row">
         <input type="hidden" name="form-name" value="contact" />
         <input
           type="text"
@@ -53,7 +53,7 @@ function ContactForm() {
           autoComplete="off"
           placeholder="Nombre y Apellido"
           required
-          className="flex-1 font-medium pb-4 border-b border-b-[#8f8f8f]  outline-none placeholder:text-[#8f8f8f] focus:border-b-[#b0f45a]"
+          className="flex-1 border-b border-b-[#8f8f8f] pb-4 font-medium outline-none placeholder:text-[#8f8f8f] focus:border-b-[#b0f45a]"
         />
         <input
           type="email"
@@ -61,18 +61,18 @@ function ContactForm() {
           autoComplete="off"
           placeholder="Email"
           required
-          className="flex-1 font-medium pb-4 border-b border-b-[#8f8f8f] outline-none placeholder:text-[#8f8f8f] focus:border-b-[#b0f45a]"
+          className="flex-1 border-b border-b-[#8f8f8f] pb-4 font-medium outline-none placeholder:text-[#8f8f8f] focus:border-b-[#b0f45a]"
         />
       </div>
       <textarea
         name="message"
         placeholder="Mensaje"
         required
-        className="resize-none flex-1 min-h-40 pb-4 font-medium border-b border-b-[#8f8f8f] outline-none placeholder:text-[#8f8f8f] focus:border-b-[#b0f45a]"
+        className="min-h-40 flex-1 resize-none border-b border-b-[#8f8f8f] pb-4 font-medium outline-none placeholder:text-[#8f8f8f] focus:border-b-[#b0f45a]"
       />
       <button
         disabled={isSending}
-        className="p-4 font-medium text-[#323232] bg-[#b0f45a] rounded not-disabled:transition not-disabled:cursor-pointer not-disabled:hover:brightness-90 disabled:brightness-75"
+        className="rounded bg-[#b0f45a] p-4 font-medium text-[#323232] not-disabled:cursor-pointer not-disabled:transition not-disabled:hover:brightness-90 disabled:brightness-75"
       >
         {isSending ? "Enviando..." : "Enviar"}
       </button>

@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import type { Metadata } from "next";
+import { ReactNode } from "react";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -9,26 +10,25 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  icons: {
-    icon: "/favicon.svg",
-  },
   title: "Hey Dev | Agencia de diseño y desarrollo web a medida",
   description:
     "Implementamos soluciones modernas y efectivas que se adaptan a las necesidades de tu negocio.",
 };
 
-export default function RootLayout({
+function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="es">
       <body
-        className={`${poppins.variable} text-pretty text-white bg-[#323232]`}
+        className={`${poppins.variable} bg-[#323232] text-pretty text-white`}
       >
         {children}
       </body>
     </html>
   );
 }
+
+export default RootLayout;

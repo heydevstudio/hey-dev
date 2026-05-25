@@ -8,7 +8,7 @@ import Contact from "./Contact/Contact";
 
 function Main() {
   return (
-    <main className="md:px-16 relative overflow-hidden size-full px-6">
+    <main className="relative size-full overflow-hidden px-6 md:px-16">
       <AOSInit />
       <Hero />
       <WhyChooseUs />

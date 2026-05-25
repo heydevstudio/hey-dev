@@ -7,7 +7,7 @@ interface IProps {
 
 function WorkProcessItem({ step, workProcessItem }: IProps) {
   return (
-    <article className="relative flex flex-col gap-4 justify-center items-center min-h-48">
+    <article className="relative flex min-h-48 flex-col items-center justify-center gap-4">
       <span className="absolute text-[12rem] leading-48 font-bold text-[#4b593a]">
         {step}
       </span>

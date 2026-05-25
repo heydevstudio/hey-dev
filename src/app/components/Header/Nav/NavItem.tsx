@@ -12,10 +12,10 @@ function NavItem({ navItem, setMobileMenuIsOpen }: IProps) {
     <li>
       <Link
         href={navItem.href}
-        className="inline-block group"
+        className="group inline-block"
         onClick={() =>
           setMobileMenuIsOpen((mobileMenuIsOpen) =>
-            mobileMenuIsOpen ? false : mobileMenuIsOpen
+            mobileMenuIsOpen ? false : mobileMenuIsOpen,
           )
         }
       >

@@ -24,15 +24,15 @@ function Header() {
   }, [windowWidth, mobileMenuIsOpen]);
 
   return (
-    <header className="w-full h-[7rem] border-b border-b-[#b0f45a]">
-      <div className="md:px-16 flex justify-between items-center w-full max-w-7xl h-full mx-auto px-6">
+    <header className="h-[7rem] w-full border-b border-b-[#b0f45a]">
+      <div className="mx-auto flex size-full max-w-7xl items-center justify-between px-6 md:px-16">
         <div className="w-32">
           <Image
             src="/img/logo.svg"
             alt="Logo"
             width={0}
             height={0}
-            className="w-full h-auto"
+            className="h-auto w-full"
             priority
           />
         </div>

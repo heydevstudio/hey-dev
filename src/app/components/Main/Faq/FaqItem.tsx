@@ -14,10 +14,10 @@ function FaqItem({ faqItem }: IProps) {
 
   return (
     <button
-      className="flex flex-col w-full p-8 text-left bg-[#323232] rounded border border-[#b0f45a] cursor-pointer"
+      className="flex w-full cursor-pointer flex-col rounded border border-[#b0f45a] bg-[#323232] p-8 text-left"
       onClick={() => setIsOpen(!isOpen)}
     >
-      <div className="flex justify-between items-center w-full">
+      <div className="flex w-full items-center justify-between">
         <p className="w-5/6 text-lg font-medium">{faqItem.question}</p>
 
         {isOpen ? (
